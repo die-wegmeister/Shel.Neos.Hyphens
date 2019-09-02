@@ -20,13 +20,14 @@ class ButtonComponent extends PureComponent {
     render() {
         const finalProps = omit(this.props, ['formattingRule', 'inlineEditorOptions', 'i18nRegistry', 'tooltip', 'isActive', 'label']);
         return (
-            <Button {...finalProps} isActive={Boolean(this.props.isActive)} className={hyphensButtonTheme['btn--no-padding']}
-                    title={this.props.i18nRegistry.translate(this.props.tooltip)}>
+            <Button {...finalProps} isActive={Boolean(this.props.isActive)}
+                className={hyphensButtonTheme['btn--no-padding']}
+                title={this.props.i18nRegistry.translate(this.props.tooltip)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18.109" height="9.697" viewBox="0, 0, 18.109, 9.697">
-                    <g stroke="currentColor" stroke-miterlimit="3.864" fill="none">
+                    <g stroke="currentColor" strokeMiterlimit="3.864" fill="none">
                         <path d="M2.596 1a5.44 5.44 0 0 0 0 7.697m12.918 0a5.44 5.44 0 0 0 0-7.697"
-                              stroke-width=".907"/>
-                        <path d="M4.52 4.848h9.07" stroke-width="1.814"/>
+                            strokeWidth=".907"/>
+                        <path d="M4.52 4.848h9.07" strokeWidth="1.814"/>
                     </g>
                 </svg>
             </Button>

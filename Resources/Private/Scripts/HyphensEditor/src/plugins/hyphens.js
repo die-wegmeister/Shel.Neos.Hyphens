@@ -1,6 +1,6 @@
 import {Plugin, ViewRange} from 'ckeditor5-exports';
 import ShyCommand from '../commands/shy';
-import styles from './hyphens.vanilla-css';
+import styles from './hyphens.vanilla-css'; // eslint-disable-line no-unused-vars
 
 const softHyphenCharacter = '\u00AD';
 
@@ -12,7 +12,7 @@ export default class Hyphens extends Plugin {
     init() {
         const {editor} = this;
 
-        editor.commands.add('insertShyEntity', new ShyCommand(this.editor));
+        editor.commands.add('insertShyEntity', new ShyCommand(editor));
 
         editor.conversion.for('editingDowncast').add(dispatcher => {
             dispatcher.on('insert:$text', (evt, data, conversionApi) => {
